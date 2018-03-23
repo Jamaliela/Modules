@@ -15,8 +15,8 @@
 # Attribution-Noncommercial-Share Alike 3.0 United States License.
 ####################################################################################
 
-import turtle               # Notice the different ways we can import modules
-from math import sqrt       # Notice the different ways we can import modules; there's one more way...
+import turtle           # Notice the different ways we can import modules
+from math import sqrt   # Notice the different ways we can import modules; there's one more way, which you've seen before...
 
 
 def calculate_size(num_dots):
@@ -25,7 +25,7 @@ def calculate_size(num_dots):
         return (int(square), int(square))
     else:
         denom = num_dots // sqrt(num_dots)
-        while num_dots % denom!= 0:
+        while num_dots % denom != 0:
             denom -= 1
         return (int(denom), int(num_dots // denom))
 
