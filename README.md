@@ -1,3 +1,11 @@
 # T12: Modules
 
-The accompanying Google Doc and instructions can be accessed here: https://docs.google.com/document/d/1W_wf6Eq4oa_lZI6bk-uYu-33xoVcTQB3PFmqvlFuMfc/edit?usp=sharing
+Name 1: ____________
+
+Name 2: ____________
+
+Name 3 (if needed): ____________
+
+Repository Link: ______________
+
+Google Document Link: ______________

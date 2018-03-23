@@ -1,3 +1,20 @@
+######################################################################
+# Author: Dr. Scott Heggen      TODO: Change this to your names
+# Username: heggens             TODO: Change this to your usernames
+#
+# Assignment: A6: It's in your Genes
+#
+# Purpose: A test suite for testing the a6_genes.py program
+#
+######################################################################
+# Acknowledgements:
+#   Original Author: Dr. Jan Pearce
+#
+#   Idea from: http://www.cs.uni.edu/~schafer/1140/assignments/pa9/index.htm
+#
+# licensed under a Creative Commons
+# Attribution-Noncommercial-Share Alike 3.0 United States License.
+####################################################################################
 import sys
 
 from a6_genes_solved import *
@@ -14,6 +31,7 @@ def testit(did_pass):
     :return: None
     """
     # This function works correctly--it is verbatim from the text
+
     linenum = sys._getframe(1).f_lineno         # Get the caller's line number.
     if did_pass:
         msg = "Test at line {0} ok.".format(linenum)
@@ -26,9 +44,10 @@ def genomics_test_suite():
     """
     The genomics_test_suite() is designed to test the following:
       is_nucleotide(sequence)
-
       complement_strand()
+      mRNA()
       amino_acid_chunks()
+      chunk_amino_acid()
       sequence_gene()
 
     :return: None
@@ -72,6 +91,7 @@ def genomics_test_suite():
     testit(sequence_gene("CGTAGGCAT") == "ASV") # because mRNA sequence is "GCAUCCGUA"
                                                 # taking the complement and then replacing the T nucleotide with U.
                                                 # Grouping into triples, we  get the "ASV" amino acid sequence.
+
 
 genomics_test_suite()
 

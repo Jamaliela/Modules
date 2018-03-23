@@ -67,16 +67,18 @@ def user_input(screen_height, screen_width):
 
 
 def main():
-    wn = turtle.Screen()
     screen_width = 1100
     screen_height = 650
+
+    (dot_distance, height, width) = user_input(screen_height, screen_width)
+    wn = turtle.Screen()
     wn.setup(width=screen_width, height=screen_height, startx=0, starty=0)
 
     dottie = turtle.Turtle()
+    dottie.speed(0)
     dottie.penup()
     dottie.setpos(-(screen_width/2-50), screen_height/2-25)
 
-    (dot_distance, height, width) = user_input(screen_height, screen_width)
     draw_board(dot_distance, dottie, height, width)
     dottie.hideturtle()
 

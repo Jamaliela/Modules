@@ -83,10 +83,8 @@ def chunk_amino_acid(sequence):
     :return: A list where each element is a set of three DNA values
     """
 
-    list_of_chunks=[]
+    list_of_chunks = []
 
-    while len(sequence) % 3 > 0:
-        sequence = sequence[:-1]
     for i in range(len(sequence)//3):
         list_of_chunks.append(sequence[i*3:i*3+3])
 
@@ -150,7 +148,7 @@ def sequence_gene(sequence):
     #  This function was already completed correctly! No changes needed!
     ###################################################################
 
-    aaseq=""                                                # Amino acid sequence
+    aaseq = ""                                                # Amino acid sequence
     if is_nucleotide(sequence):                             # Checks for a valid sequence
         comp_strand = complement_strand(sequence)           # Finds the complement sequence
         mrna = mRNA(comp_strand)                            # Finds the mRNA of the complement
@@ -167,7 +165,7 @@ def main():
 
     :return: None
     """
-    sequence = "CACGTAGCTAAAGGGCTCTCTC"
+    sequence = input("Please enter a valid gene sequence to convert to an amino acid: \n")
     print("The input sequence {0} produces the amino acid {1}".format(sequence, sequence_gene(sequence)))         # Uncomment this line to use the function directly
     # Notice the missing call to the test suite?!!?
 
