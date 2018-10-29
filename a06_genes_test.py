@@ -1,10 +1,10 @@
 ######################################################################
-# Author: Dr. Scott Heggen      TODO: Change this to your names
-# Username: heggens             TODO: Change this to your usernames
+# Author: Scott Heggen & Emily Lovell     TODO: Change this to your names
+# Username: heggens & lovelle             TODO: Change this to your usernames
 #
-# Assignment: A6: It's in your Genes
+# Assignment: A06: It's in your Genes
 #
-# Purpose: A test suite for testing the a6_genes.py program
+# Purpose: A test suite for testing the a06_genes.py program
 #
 ######################################################################
 # Acknowledgements:
@@ -17,7 +17,7 @@
 ####################################################################################
 import sys
 
-from a6_genes_solved import *
+from a06_genes_solved import *
 # You may get red squiggly lines from PyCharm; it'll be okay though.
 # To remove them, right click the folder where this file is located, and select
 # "Mark directory as" and then "Sources Root"

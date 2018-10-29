@@ -1,8 +1,8 @@
 ######################################################################
-# Author: Dr. Scott Heggen      TODO: Change this to your names
-# Username: heggens             TODO: Change this to your usernames
+# Author: Scott Heggen & Emily Lovell      TODO: Change this to your names
+# Username: heggens & lovelle            TODO: Change this to your usernames
 #
-# Assignment: A6: It's in your Genes
+# Assignment: A06: It's in your Genes
 #
 # Purpose: Determine an amino acid sequence given an input DNA sequence
 #
@@ -106,27 +106,27 @@ def amino_acid_chunks(threecharseq):
 
     # We haven't learned about dictionaries yet, but here is one for the extra curious.
     # You aren't expected to know what this is yet.
-    translator = { "GCA":"A", "GCC":"A", "GCG":"A", "GCU":"A",
-                        "AGA":"R", "AGG":"R", "CGA":"R", "CGC":"R", "CGG":"R", "CGU":"R",
-                        "GAC":"D", "GAU":"D",
-                        "AAC":"N", "AAU":"N",
-                        "UGC":"C", "UGU":"C",
-                        "GAA":"E", "GAG":"E",
-                        "CAA":"Q", "CAG":"Q",
-                        "GGA":"G", "GGC":"G", "GGU":"G", "GGG":"G",
-                        "CAC":"H", "CAU":"H",
-                        "AUA":"I", "AUC":"I", "AUU":"I",
-                        "UUA":"L", "UUG":"L", "CUA":"L", "CUC":"L", "CUG":"L", "CUU":"L",
-                        "AAA":"K", "AAG":"K",
-                        "AUG":"M",
-                        "UUC":"F", "UUU":"F",
-                        "CCA":"P", "CCC":"P", "CCG":"P", "CCU":"P",
-                        "AGC":"S", "AGU":"S", "UCA":"S", "UCC":"S", "UCG":"S", "UCU":"S",
-                        "ACA":"T", "ACC":"T", "ACG":"T", "ACU":"T",
-                        "UGG":"W",
-                        "UAC":"Y", "UAU":"Y",
-                        "GUA":"V", "GUC":"V", "GUG":"V", "GUU":"V",
-                        "UAA":"*", "UAG":"*", "UGA":"*" }
+    translator = {"GCA": "A", "GCC": "A", "GCG": "A", "GCU": "A",
+                  "AGA": "R", "AGG": "R", "CGA": "R", "CGC": "R", "CGG": "R", "CGU": "R",
+                  "GAC": "D", "GAU": "D",
+                  "AAC": "N", "AAU": "N",
+                  "UGC": "C", "UGU": "C",
+                  "GAA": "E", "GAG": "E",
+                  "CAA": "Q", "CAG": "Q",
+                  "GGA": "G", "GGC": "G", "GGU": "G", "GGG": "G",
+                  "CAC": "H", "CAU": "H",
+                  "AUA": "I", "AUC": "I", "AUU": "I",
+                  "UUA": "L", "UUG": "L", "CUA": "L", "CUC": "L", "CUG": "L", "CUU": "L",
+                  "AAA": "K", "AAG": "K",
+                  "AUG": "M",
+                  "UUC": "F", "UUU": "F",
+                  "CCA": "P", "CCC": "P", "CCG": "P", "CCU": "P",
+                  "AGC": "S", "AGU": "S", "UCA": "S", "UCC": "S", "UCG": "S", "UCU": "S",
+                  "ACA": "T", "ACC": "T", "ACG": "T", "ACU": "T",
+                  "UGG": "W",
+                  "UAC": "Y", "UAU": "Y",
+                  "GUA": "V", "GUC": "V", "GUG": "V", "GUU": "V",
+                  "UAA": "*", "UAG": "*", "UGA": "*"}
 
     if threecharseq in translator.keys():
         return translator[threecharseq]     # Given any 3 letter sequence, this returns the amino acid for that sequence
@@ -165,9 +165,9 @@ def main():
 
     :return: None
     """
+
     sequence = input("Please enter a valid gene sequence to convert to an amino acid: \n")
-    print("The input sequence {0} produces the amino acid {1}".format(sequence, sequence_gene(sequence)))         # Uncomment this line to use the function directly
-    # Notice the missing call to the test suite?!!?
+    print("The input sequence {0} produces the amino acid {1}".format(sequence, sequence_gene(sequence)))
 
 
 if __name__ == "__main__":
