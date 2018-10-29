@@ -16,7 +16,8 @@
 ####################################################################################
 
 import turtle           # Notice the different ways we can import modules
-from math import sqrt   # Notice the different ways we can import modules; there's one more way, which you've seen before...
+from math import sqrt   # Notice the different ways we can import modules; there's one more way,
+                        # which you've seen before (see a06_genes_test.py)
 
 
 def calculate_size(num_dots):
