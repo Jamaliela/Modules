@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Dr. Scott Heggen      TODO: Change this to your names
-# Username: heggens             TODO: Change this to your usernames
+# Author: Tom West & Ela Jamali
+# Username: Westth & Jamalie
 #
 # Assignment: T12: Modules
 #
@@ -21,10 +21,15 @@ from math import sqrt   # Notice the different ways we can import modules; there
 
 
 def calculate_size(num_dots):
-    square = sqrt(num_dots)
-    if num_dots % square == 0:
+    """takes in the number of dots and put it in to length and width values
+     :param: num_dots is number of dots
+     :return: square length & width values
+     :return : denom length and width values after value
+     """
+    square = sqrt(num_dots) # does the square root of the number
+    if num_dots % square == 0: # checks to make sure its an even square
         return (int(square), int(square))
-    else:
+    else:                                   # if it is not a an even square it makes a rectangle
         denom = num_dots // sqrt(num_dots)
         while num_dots % denom != 0:
             denom -= 1
@@ -32,13 +37,21 @@ def calculate_size(num_dots):
 
 
 def is_valid_size(dot_width, dot_height, distance, screen_width, screen_height):
-    if dot_width * distance > screen_width or dot_height * distance > screen_height:
+    """takes the dot width and height and make sure it will fit the window
+    :param: dot_width  dot width
+    :param: dot_height  dot height
+    :param: distance    distance between dots
+    :param: screen_width screen height
+    :param: screen_height screen width
+    """
+    if dot_width * distance > screen_width or dot_height * distance > screen_height: # makes sure we don't fall off the page
         return False
     return True
 
 
 def draw_board(dot_distance, dottie, height, width):
-    for y in range(height):
+    """draws the grid of dots"""
+    for y in range(height): # draws the dots with a loop
         for i in range(width):
             dottie.dot()
             dottie.forward(dot_distance)
@@ -49,18 +62,25 @@ def draw_board(dot_distance, dottie, height, width):
 
 
 def user_input(screen_height, screen_width):
+    """takes user input to make the dots
+    :param: screen_height
+    :param: screen_width
+    :return: dot_distance
+    :return: height:
+    :return: width:
+    """
     num_dots = "x"
     while not num_dots.isnumeric():
-        num_dots = input("How many dots do you want? ")
-    num_dots = int(num_dots)
-    (width, height) = calculate_size(num_dots)
-    dot_distance = screen_width
+        num_dots = input("How many dots do you want? ") # makes sure we have correct input for dots
+    num_dots = int(num_dots) # makes dots an int
+    (width, height) = calculate_size(num_dots) # throws it up to cal
+    dot_distance = screen_width # screen width it set equal to dot distances
     first = False
     while not is_valid_size(width, height, dot_distance, screen_width, screen_height):
         if first:
-            print("That won't fit on the screen; pick a smaller number")
+            print("That won't fit on the screen; pick a smaller number") # keeps the number small enough to fit the screen
         dot_distance = input("How far apart are the dots? ")
-        while not dot_distance.isnumeric():
+        while not dot_distance.isnumeric(): # make sure it is a number
             dot_distance = input("Let's try an integer instead. \nHow far apart are the dots? ")
         first = True
         dot_distance = int(dot_distance)
