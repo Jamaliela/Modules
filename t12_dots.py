@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Dr. Scott Heggen      TODO: Change this to your names
-# Username: heggens             TODO: Change this to your usernames
+# Author: Tom West & Ela Jamali
+# Username: Westth & Jamalie
 #
 # Assignment: T12: Modules
 #
@@ -71,16 +71,16 @@ def user_input(screen_height, screen_width):
     """
     num_dots = "x"
     while not num_dots.isnumeric():
-        num_dots = input("How many dots do you want? ")
-    num_dots = int(num_dots)
-    (width, height) = calculate_size(num_dots)
-    dot_distance = screen_width
+        num_dots = input("How many dots do you want? ") # makes sure we have correct input for dots
+    num_dots = int(num_dots) # makes dots an int
+    (width, height) = calculate_size(num_dots) # throws it up to cal
+    dot_distance = screen_width # screen width it set equal to dot distances
     first = False
     while not is_valid_size(width, height, dot_distance, screen_width, screen_height):
         if first:
-            print("That won't fit on the screen; pick a smaller number")
+            print("That won't fit on the screen; pick a smaller number") # keeps the number small enough to fit the screen
         dot_distance = input("How far apart are the dots? ")
-        while not dot_distance.isnumeric():
+        while not dot_distance.isnumeric(): # make sure it is a number
             dot_distance = input("Let's try an integer instead. \nHow far apart are the dots? ")
         first = True
         dot_distance = int(dot_distance)

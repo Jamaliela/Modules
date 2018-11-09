@@ -35,6 +35,7 @@ def testit(did_pass):
     print(msg)
 
 def calulate_size_test_suite():
+    """runs test on calculate size """
     testit(calculate_size(9)== (3,3) )
     testit(calculate_size(16)== (4,4) )
     testit(calculate_size(25)== (5,5) )
@@ -43,9 +44,11 @@ def calulate_size_test_suite():
     testit(calculate_size(10) == (2,5))
     testit(calculate_size(7) == (1,7))
     testit(calculate_size(11) == (1,11))
+    #testit(calculate_size("eleven")=="Error")
 
 
 def valid_size_test_suit():
+    """runs test on is valid size"""
     testit(is_valid_size(70, 70, 70, 1100, 650) == False)
     testit(is_valid_size(50, 50, 50, 1100, 650) == False)
     testit(is_valid_size(20, 20, 20, 1100, 650) == True)
